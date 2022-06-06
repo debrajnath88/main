@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debraj Nath</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+    <div id="preloader"></div>
+    <section>
+        <img src="assets/stars.png" id="stars">
+        <img src="assets/stars2.png" id="stars2">
+        <img src="assets/moon.png" id="moon">
+        <h2 id="text">Namaskar<p id="scroll">Scroll Down</p></h2>
+        <img src="assets/buildings.png" id="buildings">
+        <img src="assets/river.jpeg" id="river">
+    </section>
+
+
+    <div class="sec1">
+        <h2 data-aos="fade-in">Welcome to my website.</h2>
+        <h3 data-aos="fade-in">My name is Debraj Nath.</h3>
+        <p data-aos="flip-up">Engineer</p>
+        <p data-aos="flip-down">Dreamer</p>
+        <p data-aos="flip-up">Believer</p>
+        <p data-aos="flip-down">Creator</p>
+        <h4 data-aos="flip-up">Reinventing myself every single day.</h4>
+        <h2 data-aos="slide-up">Recent Project</h2>
+        <h3 data-aos="slide-up">Project Marvin</h3>
+        <video data-aos="slide-up" onplaying="myFunction()" onpause="myFunction2()" src="/assets/Project MARVIN.mp4" controls></video>
+        <p data-aos="zoom-in" class="projectdec">Project Marvin was started to design and develope next generation early warning unwanted incident detection and fighting system on the planet earth.</p>
+        <h2 data-aos="flip-up" contenteditable="true" class="leaveamessage">Leave a message...</h2>
+
+        <form data-aos="flip-up" class="messagecontainer" action="https://formsubmit.co/debrajnath88@gmail.com" method="POST">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_subject" value="New message from your website">
+            <input class="name" type="text" name="name" placeholder="Your name" required>
+            <input class="email" type="email" name="email" placeholder="Your email address" required>
+            <input class="type-message" type="text" name="message" placeholder="Write your message here" required>
+            <button class="button" type="submit">Send</button>
+<!-- Change the domain name to work the thankyou page -->
+            <input type="hidden" name="_next" value="https://debrajnath88.github.io/main/page/thankyou.html">
+        </form> 
+
+        <p class="footer">Debraj Nath</p> 
+        <audio loop id= "playit" src="/assets/backgroundmusic.mp3"></audio>
+    </div>
+
+    
+
+    <script>
+        var loader = document.getElementById("preloader");
+        window.addEventListener("load",function(){
+            loader.style.display = "none";
+        })
+        // Parallax effect code 
+
+let stars = document.getElementById('stars');
+let stars2 = document.getElementById('stars2');
+let moon = document.getElementById('moon');
+let text = document.getElementById('text');
+let scroll = document.getElementById('scroll');
+let buildings = document.getElementById('buildings');
+let river = document.getElementById('river');
+
+
+window.addEventListener('scroll',function(){
+let value = window.scrollY;
+stars.style.bottom = value * 0.05 + '%';
+stars2.style.bottom = value * 0.025 + '%';
+moon.style.left = -value * 0.5 + 'px';
+text.style.top = value * 1 + 'px';
+buildings.style.bottom = value * -0.15 + 'px'; 
+})
+
+
+</script>
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+<!-- Script to play audio when scrolled  -->
+<script>
+    window.addEventListener('scroll',function(){
+      document.getElementById('playit').play();
+    })
+</script>
+
+<script>
+    function myFunction(){
+        var x = document.getElementById('playit');
+           x.pause();
+       }
+       function myFunction2(){
+        var x = document.getElementById('playit');
+           x.play();
+       }
+</script>
+
+</body>
+
+</html>
